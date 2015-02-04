@@ -1,0 +1,19 @@
+parameters:
+    cli_domain: ezrun.com
+    
+    db_host: localhost
+    db_port: 3306
+    db_driver: pdo_mysql
+    db_charset: utf8
+    db_name: ezrun
+    db_user: root
+    db_pass: 663311
+    db_prefix: ezr
+
+    smtp_server: localhost
+    smtp_port: 25
+    smtp_host: localhost
+
+    language_cookie: ezrunlangu
+    
+    twig_cache: false

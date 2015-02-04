@@ -1,0 +1,5 @@
+/cache/*
+/upload/*
+/vendor/
+/web/temp/*
+/web/media/*

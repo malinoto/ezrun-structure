@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+set_time_limit(0);
+
+echo "\n";
+
+if(isset($argv[1])) {
+    
+    $arguments = explode(':', $argv[1]);
+    
+    switch($arguments[0]) {
+        
+        case 'orm':
+            require_once(dirname(__FILE__) . '/doctrine/DoctrineManager.php');
+            
+            new DoctrineManager($argv[1]);
+            break;
+        
+        default:
+            echo 'Unknown command!';
+            break;
+    }
+}
+else echo "Please, give a command!";
+
+echo "\n\n";

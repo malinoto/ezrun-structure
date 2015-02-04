@@ -1,0 +1,16 @@
+RewriteEngine On
+
+#CSS
+RewriteRule ^(main)\.css$ css.php?file=$1	[L]
+
+#JS
+RewriteRule ^(scripts)\.js$ js.php?file=$1	[L]
+
+#thumbs
+RewriteRule ^thumb/stretch/([0-9]+)/([0-9]+)/((0|1)/)?(.*) thumbs/stretch.php?p=$1-$2-$5-$4 [L,QSA]
+RewriteRule ^thumb/crop/([0-9]+)/([0-9]+)/(0|1)/(.*) thumbs/crop.php?p=$1-$2-$4-$3 [L,QSA]
+RewriteRule ^thumb/aspect/([0-9]+)/(0|1)/((0|1)/)?(.*) thumbs/aspect.php?p=$1-$5-$2-$4 [L,QSA]
+
+#redirect all other
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]

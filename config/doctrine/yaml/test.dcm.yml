@@ -1,0 +1,23 @@
+test:
+    type: entity
+    table: ezr_test
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        created:
+            type: datetime
+        test:
+            type: string
+            length: '16'
+        proba:
+            type: string
+            columnDefinition: ENUM('enum1', 'enum2')
+            nullable: false
+            options:
+                default: 'enum1'
+    
+    lifecycleCallbacks: { }

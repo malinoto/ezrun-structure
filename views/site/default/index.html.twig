@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{% block page_title %}{% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="{% block page_keywords %}{% endblock %}"/>
+	<meta name="description" content="{% block page_description %}{% endblock %}"/>
+	<!-- use this for grayscale images in > IE9 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<!-- end of grayscale meta tag -->
+	<link type="text/css" rel="stylesheet" href="{{ webpath }}main.css"/>
+	<link rel="shortcut icon" href="{{ webpath }}favicon.ico" />
+	<script type="text/javascript" src="{{ js_webpath }}vendor/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="{{ js_webpath }}vendor/json2.js"></script>
+	<script type="text/javascript" src="{{ webpath }}scripts.js"></script>
+</head>
+<body>
+    
+    {% block body %}
+    
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,7 @@
+ezrun_default_home:
+    path: /
+    defaults: { _controller: Default:index }
+
+ezrun_default_test:
+    path: /test
+    defaults: { _controller: Default:test }

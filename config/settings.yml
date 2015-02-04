@@ -1,0 +1,18 @@
+parameters:
+    languages:
+        en: English
+        bg: Български
+
+# Twig Configuration
+twig:
+    globals:
+        domain: %domain%
+        cookies_domain: %cookies_domain%
+        http_protocol: %http_protocol%
+        webpath: %webpath%
+        admin_webpath: %admin_webpath%
+        js_webpath: %js_webpath%
+        images_webpath: %images_webpath%
+        thumbs_webpath: %thumbs_webpath%
+        media_webpath: %media_webpath%
+        languages: %languages%
