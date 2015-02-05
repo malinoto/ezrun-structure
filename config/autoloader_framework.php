@@ -4,7 +4,7 @@ class Autoloader {
     
     public function __construct() {
         
-        $this->coreLoader();
+        //$this->coreLoader();
         $this->modelLoader();
     }
     

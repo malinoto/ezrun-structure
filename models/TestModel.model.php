@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 
-use \Core\Model;
+use Ezrun\Core\Model;
 
 class TestModel extends Model {
     

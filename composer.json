@@ -10,10 +10,11 @@
         }
     ],
     "autoload": {
-        "psr-0": { "": "core/", "EZRun": "config/", "models": "models/" }
+        "psr-0": { "EZRun": "config/", "models": "models/" }
     },
     "require": {
         "php": ">=5.4.16",
+        "malinoto/ezrun": "~1.0.0",
         "symfony/yaml": "2.5.*",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",

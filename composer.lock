@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ffd1cf71fe8f4cbdc272f7c85899eac",
+    "hash": "a8ec1678bf9269d5b47b6025d082e675",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -767,6 +767,47 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "malinoto/ezrun",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/malinoto/ezrun-core.git",
+                "reference": "914e3c6df43585dc728afbb4f0c748dca74e4c05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/malinoto/ezrun-core/zipball/914e3c6df43585dc728afbb4f0c748dca74e4c05",
+                "reference": "914e3c6df43585dc728afbb4f0c748dca74e4c05",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "2.4.*",
+                "doctrine/doctrine-bundle": "~1.2",
+                "doctrine/orm": "~2.2,>=2.2.3",
+                "php": ">=5.4.16",
+                "symfony/yaml": "2.5.*",
+                "twig/extensions": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ezrun\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Malin Ivanov",
+                    "email": "m.ivanov@webxploit-bg.com"
+                }
+            ],
+            "description": "The \"EZRun Framework core files",
+            "time": "2015-02-05 12:20:04"
         },
         {
             "name": "psr/log",
