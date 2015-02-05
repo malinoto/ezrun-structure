@@ -1,16 +1,10 @@
 {
-    "name": "malinoto/ezrun-structure",
+    "name": "ezrun/framework-standard-edition",
     "license": "MIT",
     "type": "project",
     "description": "The \"EZRun Standard Edition\" distribution",
-    "authors": [
-        {
-            "name": "Malin Ivanov",
-            "email": "m.ivanov@webxploit-bg.com"
-        }
-    ],
     "autoload": {
-        "psr-0": { "EZRun": "config/", "models": "models/" }
+        "psr-0": { "EzrunStandard": "config/", "Models": "models/" }
     },
     "require": {
         "php": ">=5.4.16",
@@ -22,7 +16,6 @@
         "twig/extensions": "~1.0"
     },
     "extra": {
-        "ezrun-core-dir": "core",
         "ezrun-web-dir": "web",
         "incenteev-parameters": {
             "file": "config/settings.yml"

@@ -1,8 +1,8 @@
 <?php
 namespace Controllers;
 
-use \Core\Controller;
-use \Models\TestModel;
+use Ezrun\Core\Controller;
+use Models\TestModel;
 
 class DefaultController extends Controller {
     

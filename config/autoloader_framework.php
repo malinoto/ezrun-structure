@@ -25,7 +25,8 @@ class Autoloader {
                 
                 require_once($path);
                 
-                $classname = preg_replace('/\.model.php/iu', '', $filename);
+                $classname = preg_replace('/\.model\.php/iu', '', $filename);
+                $classname = preg_replace('/\.php/iu', '', $classname);
                 
                 spl_autoload_register('Models\\' . $classname . '::Model');
             }
