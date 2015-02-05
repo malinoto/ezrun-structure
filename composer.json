@@ -1,8 +1,14 @@
 {
-    "name": "ezrun/framework-standard-edition",
+    "name": "malinoto/ezrun-structure",
     "license": "MIT",
     "type": "project",
     "description": "The \"EZRun Standard Edition\" distribution",
+    "authors": [
+        {
+            "name": "Malin Ivanov",
+            "email": "m.ivanov@webxploit-bg.com"
+        }
+    ],
     "autoload": {
         "psr-0": { "": "core/", "EZRun": "config/", "models": "models/" }
     },
