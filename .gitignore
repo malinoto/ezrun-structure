@@ -1,5 +1,9 @@
-/cache/*
+/cache/site/default/*
+/cache/admin/default/*
 /upload/*
+
 /vendor/
+
 /web/temp/*
+
 /web/media/*
