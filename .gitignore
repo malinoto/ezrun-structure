@@ -1,7 +1,6 @@
 /cache/site/default/*
 /cache/admin/default/*
-/upload/*
-
+/upload/
 /vendor/
 
 /web/temp/*
