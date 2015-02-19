@@ -6,3 +6,4 @@
 /web/temp/*
 
 /web/media/*
+/config/definitions.yml

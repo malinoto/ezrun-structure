@@ -1,5 +1,5 @@
 parameters:
-    cli_domain: ezrun.com
+    cli_domain: domainname.com
     
     db_host: localhost
     db_port: 3306
@@ -7,7 +7,7 @@ parameters:
     db_charset: utf8
     db_name: ezrun
     db_user: root
-    db_pass: 663311
+    db_pass: 123456
     db_prefix: ezr
 
     smtp_server: localhost

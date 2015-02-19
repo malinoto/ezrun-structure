@@ -8,9 +8,9 @@ class ConfigParser {
     protected $environment;
     protected $routing;
     
-    public function __construct($environment = 'dev') {
+    public function __construct() {
         
-        $this->setEnvironment($environment);
+        $this->setEnvironment();
         $this->parse();
         $this->prepare();
     }
@@ -21,7 +21,7 @@ class ConfigParser {
     private function parse() {
         
         //parameters
-        $config_file    = dirname(__FILE__) . '/settings_' . $this->getEnvironment() . '.yml';
+        $config_file    = dirname(__FILE__) . '/definitions.yml';
         $parameters     = Yaml::parse($config_file, true, true);
         
         foreach($parameters as $key => $value) {
@@ -37,6 +37,13 @@ class ConfigParser {
                         
                         $this->addParameter($param_name, $param_value);
                     }
+                }
+            }
+            else if($key == 'parameters') {
+                
+                foreach($value as $param_name => $param_value) {
+
+                    $this->addParameter($param_name, $param_value);
                 }
             }
         }
@@ -188,7 +195,10 @@ class ConfigParser {
         }
     }
     
-    public function setEnvironment($environment) {
+    public function setEnvironment() {
+        
+        $environment = getenv('EZrunEnvironment');
+        if(empty($environment)) $environment = 'dev';
         
         $this->environment = $environment;
         
