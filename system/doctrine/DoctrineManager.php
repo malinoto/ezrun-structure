@@ -93,12 +93,8 @@ class DoctrineManager {
         $generator->setUpdateEntityIfExists(true); 
         $generator->setGenerateStubMethods(true);
         $generator->setGenerateAnnotations(true);
-        //$generator->setBackupExisting(true);
-
-        foreach($metadata as $class) {
-
-            $generator->writeEntityClass($class, entities_path);
-        }
+        $generator->setBackupExisting(false);
+        $generator->generate($metadata, entities_path);
     }
     
     private function schemaCreate() {
@@ -106,7 +102,7 @@ class DoctrineManager {
         $schema_tool    = new \Doctrine\ORM\Tools\SchemaTool($this->em);
         $metadata       = $this->cmf->getAllMetadata();
         
-        $schema_tool->createSchema($metadata);
+        return $schema_tool->createSchema($metadata);
     }
     
     private function schemaUpdate() {
