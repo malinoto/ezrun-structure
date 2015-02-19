@@ -13,12 +13,21 @@
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "~1.2",
         "doctrine/common": "2.4.*",
-        "twig/extensions": "~1.0"
+        "twig/extensions": "~1.0",
+        "incenteev/composer-parameter-handler": "~2.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
     },
     "extra": {
         "ezrun-web-dir": "web",
         "incenteev-parameters": {
-            "file": "config/settings.yml"
+            "file": "config/definitions.yml"
         }
     },
     "require-dev": {
