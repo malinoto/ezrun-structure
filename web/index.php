@@ -6,7 +6,7 @@ require_once(dirname(__FILE__) . '/../config/config_parser.php');
 
 use \Core\Render;
 use \Core\Router;
-use \Core\TwigGlobalVariables;
+use \Core\TwigCustomExtension;
 
 $configParser = new ConfigParser();
 
@@ -17,7 +17,7 @@ $twig   = new Twig_Environment($loader, array(
     'debug' => true,
 ));
 $twig->addExtension(new Twig_Extension_Debug());
-$twig->addExtension(new TwigGlobalVariables($configParser->getParameters()));
+$twig->addExtension(new TwigCustomExtension($configParser->getParameters()));
 
 //router
 $router = new Router($configParser->getRouting());
