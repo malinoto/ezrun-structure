@@ -5,3 +5,9 @@ ezrun_default_home:
 ezrun_default_test:
     path: /test
     defaults: { _controller: Default:test }
+    requirements:
+        _method: GET
+
+ezrun_default_login:
+    path: /login/{token}/{token2}
+    defaults: { _controller: Default:login }

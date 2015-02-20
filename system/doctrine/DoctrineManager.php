@@ -110,7 +110,7 @@ class DoctrineManager {
         $schema_tool    = new \Doctrine\ORM\Tools\SchemaTool($this->em);
         $metadata       = $this->cmf->getAllMetadata();
         
-        $schema_tool->updateSchema($metadata);
+        return $schema_tool->updateSchema($metadata);
     }
     
     private function schemaDrop() {
