@@ -4,7 +4,7 @@ $namespaces = require_once(dirname(__FILE__) . '/../config/namespaces.php');
 
 require_once(dirname(__FILE__) . '/../config/config_parser.php');
 
-use \Core\TwigCustomExtension;
+use Ezrun\Core\TwigCustomExtension;
 
 $configParser = new ConfigParser();
 
