@@ -3,6 +3,9 @@ parameters:
         en: English
         bg: Български
 
+framework:
+    default_language: en
+
 # Twig Configuration
 twig:
     globals:
