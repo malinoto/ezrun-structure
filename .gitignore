@@ -7,4 +7,4 @@
 
 /web/media/*
 /config/definitions.yml
-/composer.lock
+composer.lock
