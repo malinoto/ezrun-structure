@@ -150,13 +150,6 @@ class ConfigParser {
         define('smtp_port', $parameters['smtp_port']);
         define('smtp_host', $parameters['smtp_host']);
         
-        
-        foreach($this->getParameters() as $key => $value) {
-            
-            if(!defined($key) && !is_array($value))
-                define($key, $value);
-        }
-        
         //global
         $global_file    = dirname(__FILE__) . '/settings.yml';
         $globals        = Yaml::parse($global_file, true, true);
@@ -164,7 +157,7 @@ class ConfigParser {
         foreach($globals as $key => $value) {
             
             //parameters
-            if($key == 'parameters') {
+            if($key == 'parameters' || $key == 'framework') {
                 
                 foreach($value as $pkey => $pvalue) {
                     
@@ -193,6 +186,13 @@ class ConfigParser {
                 
             }
         }
+        
+        foreach($this->getParameters() as $key => $value) {
+            
+            if(!defined($key) && !is_array($value))
+                define($key, $value);
+        }
+        
     }
     
     public function setEnvironment() {
