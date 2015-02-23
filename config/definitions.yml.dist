@@ -7,8 +7,8 @@ parameters:
     db_charset: utf8
     db_name: ezrun
     db_user: root
-    db_pass: 123456
-    db_prefix: ezr
+    db_pass: 
+    db_prefix: 
 
     smtp_server: localhost
     smtp_port: 25
