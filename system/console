@@ -3,6 +3,12 @@
 
 set_time_limit(0);
 
+$namespaces = require_once(dirname(__FILE__) . '/../config/namespaces.php');
+
+require_once(dirname(__FILE__) . '/../config/config_parser.php');
+
+$configParser = new ConfigParser();
+
 echo "\n";
 
 if(isset($argv[1])) {
@@ -14,7 +20,17 @@ if(isset($argv[1])) {
         case 'orm':
             require_once(dirname(__FILE__) . '/doctrine/DoctrineManager.php');
             
-            new DoctrineManager($argv[1]);
+            $dm = new DoctrineManager($configParser, $argv[1]);
+            $dm->prepareVariables();
+            $dm->executeCommand();
+            
+            break;
+        
+        case 'trans':
+            require_once(dirname(__FILE__) . '/translation/TranslationManager.php');
+            
+            $tm = new TranslationManager($configParser, $argv[1]);
+            $tm->executeCommand();
             break;
         
         default:

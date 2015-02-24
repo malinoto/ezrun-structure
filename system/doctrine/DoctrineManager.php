@@ -1,35 +1,19 @@
 <?php
 
-$namespaces = require_once(dirname(__FILE__) . '/../../config/namespaces.php');
-
-require_once(dirname(__FILE__) . '/../../config/config_parser.php');
-
-$configParser = new ConfigParser();
-
 use Doctrine\ORM\Mapping\Driver\YamlDriver;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Doctrine\ORM\EntityManager;
 
-class DoctrineManager {
+class DoctrineManager extends \Ezrun\Core\System\SystemAbstract {
     
     protected $config;
     protected $em;
     protected $driver;
     protected $helperSet;
     protected $cmf;
-    protected $command;
     
-    public function __construct($command) {
-        
-        $this->prepareVariables();
-        
-        $this->command = $command;
-        
-        $this->executeCommand();
-    }
-    
-    private function prepareVariables() {
+    public function prepareVariables() {
         
         $dbParams = array(
             'driver'   => db_driver,
@@ -59,9 +43,9 @@ class DoctrineManager {
         $this->cmf->setEntityManager($this->em);
     }
     
-    private function executeCommand() {
+    public function executeCommand() {
         
-        switch($this->command) {
+        switch($this->getCommand()) {
             
             case 'orm:generate-entities':
                 $this->generateEntities();
@@ -81,7 +65,7 @@ class DoctrineManager {
         }
         
         //ConsoleRunner::run($helperSet);
-        //exec("" . vendor_path . "bin/doctrine {$this->command}", $output);
+        //exec("" . vendor_path . "bin/doctrine {$this->getCommand()}", $output);
     }
     
     private function generateEntities() {

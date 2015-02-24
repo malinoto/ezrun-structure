@@ -189,8 +189,12 @@ class ConfigParser {
         
         foreach($this->getParameters() as $key => $value) {
             
-            if(!defined($key) && !is_array($value))
-                define($key, $value);
+            if(!defined($key)) {
+                
+                if(!is_array($value))
+                    define($key, $value);
+                else define($key, serialize($value));
+            }
         }
         
     }

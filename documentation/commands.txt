@@ -1,13 +1,18 @@
-phpunit -c config # Executes tests placed in the ./tests/ folder
+./phpunit -c config # Executes tests placed in the ./tests/ folder
 
-php system/console orm:generate-entities # Executes doctrine2 commands for creating entities from
+./php system/console orm:generate-entities # Executes doctrine2 commands for creating entities from
                                              the yaml files placed in the ./config/doctrine/yaml/ folder
 
-php system/console orm:schema-tool:create # Executes doctrine2 commands for creating database schema from
+./php system/console orm:schema-tool:create # Executes doctrine2 commands for creating database schema from
                                               the entities files placed in the ./config/doctrine/entities/ folder
 
-php system/console orm:schema-tool:update # Executes doctrine2 commands for updating database schema from
+./php system/console orm:schema-tool:update # Executes doctrine2 commands for updating database schema from
                                               the entities files placed in the ./config/doctrine/entities/ folder
 
-php system/console orm:schema-tool:drop # Executes doctrine2 commands for dropping database schema based on
+./php system/console orm:schema-tool:drop # Executes doctrine2 commands for dropping database schema based on
                                             the entities files placed in the ./config/doctrine/entities/ folder
+
+./php system/console trans:generate-files # generate translations files for all defined languages
+                                            by parsing the templates for trans() or |trans
+
+composer create-project ezrun/framework-standard-edition # installs ezrun basic structure
